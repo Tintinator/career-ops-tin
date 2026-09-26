@@ -1,5 +1,5 @@
 # Personal data (user fills these)
-cv.md
+# cv.md
 article-digest.md
 local/
 # Everything under data/ is generated or personal at runtime — only .gitkeep
@@ -47,32 +47,32 @@ jds/*
 *成绩单*
 
 # Interview prep (accumulated STAR+R stories — user data)
-interview-prep/*
-!interview-prep/
-!interview-prep/.gitkeep
+# interview-prep/*
+# !interview-prep/
+# !interview-prep/.gitkeep
 # Session transcripts hold real interviewer names/companies — ignore content,
 # ship only the system-owned scaffold (README + .gitkeep). #1242
-!interview-prep/sessions/
-interview-prep/sessions/*
-!interview-prep/sessions/.gitkeep
-!interview-prep/sessions/README.md
+# !interview-prep/sessions/
+# interview-prep/sessions/*
+# !interview-prep/sessions/.gitkeep
+# !interview-prep/sessions/README.md
 
 # Writing samples (user's personal files — never committed)
 writing-samples/*
 !writing-samples/README.md
 
 # User config and customization (never auto-updated)
-config/profile.yml
-config/cv-facts.json
+# config/profile.yml
+# config/cv-facts.json
 config/benchmarks.yml
 # Fork-local path declarations — this checkout's own files, read by
 # update-system.mjs. Gitignored on purpose: it describes THIS clone, not the
 # project, and must survive the sync that overwrites update-system.mjs (#2421).
 config/local-paths.txt
-portals.yml
-modes/_profile.md
-modes/_custom.md
-modes/_brief.md
+# portals.yml
+# modes/_profile.md
+# modes/_custom.md
+# modes/_brief.md
 voice-dna.md
 .update-dismissed
 .update-lock
