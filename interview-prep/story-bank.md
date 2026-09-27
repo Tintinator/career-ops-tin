@@ -19,3 +19,21 @@ Accumulated STAR+R stories for interview prep. See AGENTS.md → "Source-of-Trut
 **Result:** Finished the NDU failure-handling work and ended up with a simpler, centralized failure path (part of the broader NDU effort that achieved zero-downtime cluster updates and 326 days of continuous uptime for a partner customer).
 **Reflection:** Get experienced input on a design early, right after drafting it and before committing — before sinking more time into implementation and testing. It catches problems earlier and saves rework.
 **Best for questions about:** taking feedback / coachability, weighing design tradeoffs, deciding to discard your own work, learning from more senior engineers, failure handling / resilience design
+
+### [Application Lifecycle / Zero-Downtime] NDU Update Workflow
+**Provenance:** source: cv.md
+**Situation:** Storage clusters needed software updates without taking the cluster down.
+**Task:** Own development, maintenance, and on-call for the Non-Disruptive Update (NDU) functionality.
+**Action:** Built an NDU workflow that cycled cluster nodes offline, updated them, and reintegrated them. Hardened it with version-check utilities, script execution, and bundle validation for update fallback, cleanup, and post-upgrade flows.
+**Result:** Zero-downtime cluster updates; 326 days of continuous uptime for a partner customer.
+**Reflection:** Update paths need fallback and cleanup designed in from the start, not added after the first failed upgrade.
+**Best for questions about:** application life cycle / upgrades, zero-downtime deploys, reliability, owning a feature end to end
+
+### [Performance / Fault Tolerance] Startup Bottleneck from Incomplete Drive Recoveries
+**Provenance:** source: cv.md
+**Situation:** Incomplete drive recoveries created a startup bottleneck and reduced cluster fault tolerance.
+**Task:** Remove the bottleneck without losing recovery progress.
+**Action:** Detected incomplete drive recoveries and enabled them to resume post startup instead of blocking it.
+**Result:** Increased cluster fault tolerance and eliminated the startup bottleneck; validated with 93 days of I/O uptime under resilience testing.
+**Reflection:** Look for recovery work sitting on the critical path; moving it off often fixes both speed and resilience.
+**Best for questions about:** performance/scale, debugging a bottleneck, fault tolerance, resilience testing

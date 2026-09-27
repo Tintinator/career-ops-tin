@@ -19,10 +19,10 @@ San Jose, CA · Aug 2022 – Dec 2025
 - Owned the development and maintenance of the Non-Disruptive Update (NDU) functionality, serving as the primary on-call contact for all NDU-related incidents.
   - Achieved zero-downtime cluster updates by building an NDU workflow cycling cluster nodes offline, updating, and reintegrating them. Resulted in 326 days of continuous uptime for a partner customer.
   - Hardened NDU reliability by implementing version-check utilities, script execution, and bundle validation for update fallback, cleanup, and post-upgrade flows.
-- Enforced resource-level access control by writing privilege-based authorization checks across resource-sensitive REST APIs.
+- Enforced resource-level access by writing privilege-based authorization checks across resource-sensitive REST APIs.
 - Reduced engineer onboarding time by 50% by condensing dev environment setup, package dependencies, and CI/CD tooling instructions into an updated Confluence guide in an effort to improve PR consistency.
 
-### Cox Automotive — Software Engineer, Customer API Storefront
+### Cox Automotive — Software Engineer, Customer API Platform
 Austin, TX · Apr 2021 – Aug 2022
 
 - Contributed to an app modernization effort by converting monorepo backend to a microservice architecture and migrating existing backend schemas to new DynamoDB tables.
@@ -36,13 +36,13 @@ Madison, WI · Aug 2019 – Aug 2020
 
 - Modernized the existing home health scheduling native application to a web app using C# and TypeScript.
 - Maintained a patient-records desktop application for medical professionals.
-- Reduced physician signoff time ~15 minutes per form by redesigning medication order forms according to user feedback onsite.
+- Reduced physician signoff time around 15 minutes per form by redesigning medication order forms according to user feedback onsite.
 - Prevented patient bereavement setting loss by writing auto-save functionality.
 
 ## Skills
 
 - **Infra:** MongoDB, AWS (DynamoDB, Lambda, S3, SQS), ZeroMQ
-- **Languages:** Java, C#, Python, React
+- **Languages:** Java, C#, Python, React, JavaScript
 - **Distributed Systems:** Consensus, Leader election, rolling updates
 - **Testing:** JUnit, Mockito
 - **AI Tools:** Claude Code — spec drafting, debugging, test generation
@@ -51,4 +51,4 @@ Madison, WI · Aug 2019 – Aug 2020
 ## Education
 
 **The University of Texas at Austin** — B.S. Computer Science, GPA: 3.75/4.0
-Austin, TX
+Austin, TX · Jun 2019

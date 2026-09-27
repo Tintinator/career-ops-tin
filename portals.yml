@@ -2191,11 +2191,6 @@ tracked_companies:
     notes: "Stockholm SE / NYC / London. Audio platform, large ML/personalization org."
     enabled: true
 
-  - name: Vinted
-    careers_url: https://careers.vinted.com
-    notes: "Vilnius LT / Berlin. C2C marketplace unicorn, data science & ML roles. Greenhouse-backed custom board."
-    enabled: true
-
   # -- ATS migration refreshes (2026-08): boards moved off Greenhouse/Lever --
 
   - name: Revolut
@@ -2407,7 +2402,36 @@ tracked_companies:
 
 job_boards:
 
-  # ── Telegram channels (public) ─────────────────────────────────────
+  # ── Built In market boards ─────────────────────────────────────────
+  # One provider, three market hosts. The host is the only location scoping
+  # Built In offers; each host also carries US-remote inventory for its market.
+  # Queries mirror title_filter.positive; title/location filters still apply.
+
+  - name: Built In Chicago
+    provider: builtin
+    builtin:
+      host: www.builtinchicago.org
+      queries: ["backend engineer", "infrastructure engineer", "site reliability engineer", "distributed systems"]
+      max_pages: 2
+    enabled: true
+
+  - name: Built In Austin
+    provider: builtin
+    builtin:
+      host: www.builtinaustin.com
+      queries: ["backend engineer", "infrastructure engineer", "site reliability engineer", "distributed systems"]
+      max_pages: 2
+    enabled: true
+
+  - name: Built In NYC
+    provider: builtin
+    builtin:
+      host: www.builtinnyc.com
+      queries: ["backend engineer", "infrastructure engineer", "site reliability engineer", "distributed systems"]
+      max_pages: 2
+    enabled: true
+
+  # ── Telegram channels (public)─────────────────────────────────────
   # Public web preview at https://t.me/s/<channel>: no API key, no login.
   # 20 posts per page, walked back until since_days (default 30) or max_pages
   # (cap 10; a cut-short window is warned about). A private channel is

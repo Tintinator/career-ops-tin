@@ -49,7 +49,14 @@
      - Show the per-step token breakdown after a batch run.
      - Save PDFs date-first: YYYY-MM-DD-company.pdf -->
 
-(none yet -- add yours above)
+- **CV / resume: never include a Professional Summary section.** Applies to every
+  generated CV (`pdf`, `latex`, `latex-tex`, `text`, batch): omit the `summary`
+  field from the render payload entirely. The summary in `cv.md` stays as source
+  material only. `build-cv-html.mjs` still emits an empty "Professional Summary"
+  heading when `summary` is absent (summary is not in `OPTIONAL_SECTIONS`), so
+  after building the HTML and before `generate-pdf.mjs`, delete the block from
+  `<!-- PROFESSIONAL SUMMARY -->` through its closing `</div>` (up to the next
+  section comment). Verify with `grep 'section-title">Professional Summary'` → no match.
 
 ## Off-Limits
 
