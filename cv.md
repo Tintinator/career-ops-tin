@@ -41,7 +41,7 @@ Madison, WI · Aug 2019 – Aug 2020
 
 ## Skills
 
-- **Infra:** MongoDB, AWS (DynamoDB, Lambda, S3, SQS), ZeroMQ
+- **Infra:** PostgreSQL, MongoDB, AWS (DynamoDB, Lambda, S3, SQS), ZeroMQ
 - **Languages:** Java, C#, Python, React, JavaScript
 - **Distributed Systems:** Consensus, Leader election, rolling updates
 - **Testing:** JUnit, Mockito

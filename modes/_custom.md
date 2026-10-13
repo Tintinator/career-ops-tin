@@ -30,7 +30,27 @@
      - Cap each batch run at 20 listings unless I say otherwise.
      - If a report scores below 6, skip the cover letter. -->
 
-(none yet -- add yours above)
+- **CV / resume: indented sub-bullets in `cv.md` belong to the bullet above them.**
+  Treat a top-level bullet plus its indented sub-bullets as one unit. When
+  reordering for a JD, move the whole unit; never separate a sub-bullet from its
+  parent, move it under a different parent, or place it before its parent. Units
+  may be reordered freely; sub-bullets may be reordered within their own unit.
+  Applies to every role in `cv.md` and every output format (`pdf`, `latex`,
+  `latex-tex`, `text`, batch).
+
+- **CV / resume section order: Work Experience is the first section; Education is
+  the last section.** Applies to every generated CV in every format. The templates
+  do not do this on their own, so after building and before compiling:
+  - **LaTeX** (`build-cv-latex.mjs` output): Education is the first section in
+    `templates/cv-template.tex`. Move the block that starts at the
+    `%%%%... Education ...%%%%` banner comment and runs up to the next `%%%%` banner
+    so it sits immediately before the `%%%%  END  %%%%` line. Experience then
+    becomes the first section automatically.
+  - **HTML** (`build-cv-html.mjs` output, `pdf` mode): Experience already comes
+    first. Move the block from `<!-- EDUCATION -->` up to the next `<!-- ... -->`
+    section marker so it sits immediately before `<!-- END -->`.
+  - Verify with `pdftotext -raw` that the first section heading is the experience
+    heading and the last is Education, and that the CV still fits its page limit.
 
 ## Custom Workflows
 

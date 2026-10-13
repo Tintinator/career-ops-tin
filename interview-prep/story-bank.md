@@ -37,3 +37,12 @@ Accumulated STAR+R stories for interview prep. See AGENTS.md → "Source-of-Trut
 **Result:** Increased cluster fault tolerance and eliminated the startup bottleneck; validated with 93 days of I/O uptime under resilience testing.
 **Reflection:** Look for recovery work sitting on the critical path; moving it off often fixes both speed and resilience.
 **Best for questions about:** performance/scale, debugging a bottleneck, fault tolerance, resilience testing
+
+### [Distributed Backend / Migration] Cox Microservice Migration
+**Provenance:** source: cv.md
+**Situation:** Cox Automotive's Customer API Platform ran on a monorepo backend.
+**Task:** Contribute to the app modernization effort.
+**Action:** Converted the monorepo backend to a microservice architecture and migrated existing backend schemas to new DynamoDB tables. Automated test data provisioning and cleanup alongside it.
+**Result:** Part of the modernization effort; unit test coverage increased by 40%.
+**Reflection:** Be precise about your own scope in a team migration; name what you personally converted and migrated.
+**Best for questions about:** microservices, data migrations, NoSQL/DynamoDB, distributed backend design
