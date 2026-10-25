@@ -78,6 +78,22 @@
   `<!-- PROFESSIONAL SUMMARY -->` through its closing `</div>` (up to the next
   section comment). Verify with `grep 'section-title">Professional Summary'` → no match.
 
+- **CV / resume contact line: no icons; use text labels.** Label the contact links
+  as `Email: …`, `LinkedIn: …`, `GitHub: …`, separated by ` | `. Applies to every
+  generated CV in every format.
+  - **LaTeX** (`build-cv-latex.mjs` output): the template prefixes each link with a
+    FontAwesome icon (`\raisebox{-0.2\height}\faEnvelope\ `, `\faLinkedin\ `,
+    `\faGithub\ `) and joins the links with `~`. After building and before
+    compiling, replace each icon prefix with its text label (`Email: `,
+    `LinkedIn: `, `GitHub: `) and replace the `~` between the email/LinkedIn and
+    LinkedIn/GitHub links with ` $|$ `. Keep the `\href` and `\underline` around
+    the address itself.
+  - **HTML** (`build-cv-html.mjs` output, `pdf` mode): the contact row has no
+    icons; prefix the email, LinkedIn, and GitHub link text with the same labels.
+  - Verify with `pdftotext -raw` that the line reads
+    `Email: … | LinkedIn: … | GitHub: …` and that no `\fa` icon command remains in
+    the `.tex`.
+
 ## Off-Limits
 
 <!-- Things the agent must never do for you. Examples:
